@@ -41,6 +41,8 @@ requirements:
 test:
   requires:
     - nose
+    - pytest
+    - selenium
   imports:
     - sos_notebook
   commands:
