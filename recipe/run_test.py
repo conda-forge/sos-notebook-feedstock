@@ -22,8 +22,6 @@ class TestSoSKernel(unittest.TestCase):
         with sos_kernel() as kc:
             execute(kc=kc, code='a = 1\nprint(a)')
             stdout, stderr = assemble_output(kc.iopub_channel)
-            self.assertEqual(stderr,
-                             'Frontend communicator is broken. Please restart jupyter server\n')
             self.assertEqual(stdout.strip(), '1')
 
 if __name__ == '__main__':
