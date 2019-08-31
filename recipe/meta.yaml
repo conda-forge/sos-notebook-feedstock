@@ -25,6 +25,7 @@ requirements:
     - setuptools
   run:
     - ipykernel
+    - ptyprocess
     - ipython
     - markdown
     - matplotlib
