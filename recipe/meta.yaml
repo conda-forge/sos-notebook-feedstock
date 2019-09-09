@@ -11,6 +11,7 @@ source:
 
 build:
   number: 1
+  skip: true  # [py<36]
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
     - {{ PYTHON }} -m sos_notebook.install --sys-prefix
@@ -20,7 +21,7 @@ requirements:
     - ipython
     - notebook >=5.0.0
     - pip
-    - python >=3.6
+    - python
     - setuptools
   run:
     - ipykernel
@@ -33,7 +34,7 @@ requirements:
     - pandas
     - prometheus_client
     - prompt_toolkit
-    - python >=3.6
+    - python
     - sos >=0.19.2
     - tabulate
 
