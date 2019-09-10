@@ -3,7 +3,7 @@
 import jupyter_client
 
 try:
-    jupyter_client.kernelspec.get_kernel_spec('sos')
+    print(jupyter_client.kernelspec.get_kernel_spec('sos').to_dict())
 except jupyter_client.kernelspec.NoSuchKernel:
     print('sos kernel was not installed')
     print('The following kernels are installed:')
