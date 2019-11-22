@@ -1,5 +1,5 @@
 {% set name = "sos-notebook" %}
-{% set version = "0.20.8" %}
+{% set version = "0.21.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c45d8c8a7952299e59f45415e14cc02237b9107af40e2a3c34b9c486d463a66a
+  sha256: da988f891e0333d8dc69ac962d24af472370186fb53bd9951307a154873c3e1c
 
 build:
   number: 0
