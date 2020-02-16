@@ -10,7 +10,7 @@ source:
   sha256: d66a619148271437cd07be41d33e504b49459c8b2324da72bf44748ed496a84b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -27,7 +27,7 @@ requirements:
     - ipykernel
     - ipython
     - markdown
-    - matplotlib
+    - matplotlib-base
     - nbconvert >=5.1.1
     - nbformat
     - notebook >=5.0.0
