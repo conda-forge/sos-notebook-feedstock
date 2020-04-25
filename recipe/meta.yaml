@@ -1,16 +1,16 @@
 {% set name = "sos-notebook" %}
-{% set version = "0.21.7" %}
+{% set version = "0.21.9" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d66a619148271437cd07be41d33e504b49459c8b2324da72bf44748ed496a84b
+  sha256: 3b9d7ee87857c7ee748e63db840d0821b7597b02edc4763b07479975114b88cb
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36]
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -57,8 +57,7 @@ about:
   license: BSD
   license_family: BSD
   license_file: LICENSE
-  summary: "Script of Scripts (SoS): an interactive, cross-platform, and
-            cross-language workflow system for reproducible data analysis"
+  summary: 'Script of Scripts (SoS): an interactive, cross-platform, and cross-language workflow system for reproducible data analysis'
   doc_url: https://vatlab.github.io/sos-docs/
   dev_url: https://github.com/vatlab/sos-notebook
 
