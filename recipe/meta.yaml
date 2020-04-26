@@ -1,5 +1,5 @@
 {% set name = "sos-notebook" %}
-{% set version = "0.19.3" %}
+{% set version = "0.21.9" %}
 
 package:
   name: "{{ name|lower }}"
