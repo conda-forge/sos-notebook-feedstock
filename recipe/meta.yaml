@@ -31,6 +31,9 @@ requirements:
     - nbconvert >=5.1.1
     - nbformat
     - notebook >=5.0.0
+    - graphviz
+    - python-graphviz
+    - pillow
     - pandas
     - prometheus_client
     - prompt_toolkit
