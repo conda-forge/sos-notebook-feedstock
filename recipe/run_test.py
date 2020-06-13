@@ -3,7 +3,7 @@
 import jupyter_client
 
 try:
-    jupyter_client.kernelspec.get_kernel_spec('sos')
+    print(jupyter_client.kernelspec.get_kernel_spec('sos').to_dict())
 except jupyter_client.kernelspec.NoSuchKernel:
     print('sos kernel was not installed')
     print('The following kernels are installed:')
@@ -22,7 +22,6 @@ class TestSoSKernel(unittest.TestCase):
         with sos_kernel() as kc:
             execute(kc=kc, code='a = 1\nprint(a)')
             stdout, stderr = assemble_output(kc.iopub_channel)
-            self.assertEqual(stderr, '')
             self.assertEqual(stdout.strip(), '1')
 
 if __name__ == '__main__':
