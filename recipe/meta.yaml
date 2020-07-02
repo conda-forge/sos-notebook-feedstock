@@ -10,7 +10,7 @@ source:
   sha256: bb3b6c24b4d41f8c90c52ab0f85fa7e20102140cf9919822e2c2171ffdc6bc2a
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -27,7 +27,8 @@ requirements:
     - ipykernel
     - ipython
     - markdown
-    - matplotlib-base
+    # see https://github.com/conda-forge/sos-notebook-feedstock/issues/43
+    # - matplotlib-base
     - nbconvert >=5.1.1
     - nbformat
     - notebook >=5.0.0
