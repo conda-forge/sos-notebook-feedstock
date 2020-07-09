@@ -5,7 +5,7 @@ Home: https://github.com/vatlab/SOS
 
 Package license: BSD
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Script of Scripts (SoS): an interactive, cross-platform, and cross-language workflow system for reproducible data analysis
 
