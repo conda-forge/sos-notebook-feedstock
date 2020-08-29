@@ -62,7 +62,7 @@ jobs:
         packageSpecs: 'python=3.6 conda-build=3.18.11 conda conda-forge::conda-forge-ci-setup=3 pip' # Optional
         installOptions: "-c conda-forge"
         updateConda: true
-      displayName: Install conda-build=3.18.11 and activate environment
+      displayName: Install conda-build and activate environment
 
     - script: set PYTHONUNBUFFERED=1
       displayName: Set PYTHONUNBUFFERED
