@@ -38,7 +38,7 @@ requirements:
     - pandas
     - prometheus_client
     - prompt_toolkit
-    - python >=3.7.0
+    - python
     - jupyter_client >=7.0.2
     - jinja2 <=2.11
     - sos >=0.19.2
@@ -60,7 +60,7 @@ test:
 
 about:
   home: https://github.com/vatlab/SOS
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Script of Scripts (SoS): an interactive, cross-platform, and cross-language workflow system for reproducible data analysis'
