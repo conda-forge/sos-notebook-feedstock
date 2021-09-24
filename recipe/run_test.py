@@ -21,7 +21,7 @@ class TestSoSKernel(unittest.TestCase):
     def testKernel(self):
         with sos_kernel() as kc:
             execute(kc=kc, code='a = 1\nprint(a)')
-            stdout, stderr = assemble_output(kc.iopub_channel)
+            stdout, stderr = assemble_output(kc.get_iopub_msg)
             self.assertEqual(stdout.strip(), '1')
 
 if __name__ == '__main__':

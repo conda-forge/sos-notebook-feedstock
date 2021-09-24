@@ -1,5 +1,5 @@
 {% set name = "sos-notebook" %}
-{% set version = "0.22.3" %}
+{% set version = "0.22.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ee52ed049b61da81502e3fe688eec62eb84ab2fac6751766eed89585fbf9b293
+  sha256: 289e37851d72eff4521c725ac57ed23e7953bc4cf5c9e8e8ec69bedd18b47311
 
 build:
   number: 0
-  skip: true  # [py<36]
+  skip: true  # [py<37]
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
     - {{ PYTHON }} -m sos_notebook.install --sys-prefix
@@ -23,13 +23,14 @@ requirements:
     - pip
     - python
     - setuptools
+    - jupyter_contrib_core
   run:
     - ipykernel
     - ipython
     - markdown
     # see https://github.com/conda-forge/sos-notebook-feedstock/issues/43
     # - matplotlib-base
-    - nbconvert >=5.1.1
+    - nbconvert >=6.0.1
     - nbformat
     - notebook >=5.0.0
     - graphviz
@@ -39,6 +40,8 @@ requirements:
     - prometheus_client
     - prompt_toolkit
     - python
+    - jupyter_client >=7.0.2
+    - jinja2 <=2.11
     - sos >=0.19.2
     - tabulate
 
@@ -58,7 +61,7 @@ test:
 
 about:
   home: https://github.com/vatlab/SOS
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Script of Scripts (SoS): an interactive, cross-platform, and cross-language workflow system for reproducible data analysis'
