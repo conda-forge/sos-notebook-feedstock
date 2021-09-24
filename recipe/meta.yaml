@@ -40,6 +40,7 @@ requirements:
     - prompt_toolkit
     - python
     - jupyter_client >=7.0.2
+    - jupyter_contrib_core
     - jinja2 <=2.11
     - sos >=0.19.2
     - tabulate
