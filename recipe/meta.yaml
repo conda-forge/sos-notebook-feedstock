@@ -29,7 +29,7 @@ requirements:
     - markdown
     # see https://github.com/conda-forge/sos-notebook-feedstock/issues/43
     # - matplotlib-base
-    - nbconvert >=5.1.1
+    - nbconvert >=6.0.1
     - nbformat
     - notebook >=5.0.0
     - graphviz
@@ -38,7 +38,9 @@ requirements:
     - pandas
     - prometheus_client
     - prompt_toolkit
-    - python
+    - python >=3.7.0
+    - jupyter_client >=7.0.2
+    - jinja2 <=2.11
     - sos >=0.19.2
     - tabulate
 
