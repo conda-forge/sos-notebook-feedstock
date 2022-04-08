@@ -10,7 +10,7 @@ source:
   sha256: 129fe2eec1360de8834718c92338afeee915c9e29589ba23cc89e32c0c60ca97
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -41,7 +41,7 @@ requirements:
     - prompt_toolkit
     - python
     - jupyter_client >=7.0.2
-    - jinja2 <=2.11
+    - jinja2
     - sos >=0.19.2
     - tabulate
 
