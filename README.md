@@ -1,11 +1,11 @@
-About sos-notebook
-==================
+About sos-notebook-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sos-notebook-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/vatlab/SOS
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sos-notebook-feedstock/blob/main/LICENSE.txt)
 
 Summary: Script of Scripts (SoS): an interactive, cross-platform, and cross-language workflow system for reproducible data analysis
 
