@@ -11,7 +11,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<37]
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -22,7 +21,7 @@ requirements:
     - ipython
     - notebook >=5.0.0
     - pip
-    - python
+    - python >=3.6
     - setuptools
     - jupyter_contrib_core
   run:
@@ -40,7 +39,7 @@ requirements:
     - pandas
     - prometheus_client
     - prompt_toolkit
-    - python
+    - python >=3.6
     - jupyter_client >=7.0.2
     - jinja2
     - sos >=0.19.2
