@@ -12,6 +12,7 @@ source:
 build:
   number: 0
   skip: true  # [py<37]
+  noarch: python
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
     - {{ PYTHON }} -m sos_notebook.install --sys-prefix
