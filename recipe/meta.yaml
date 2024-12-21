@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 85785be68915585f5405080d780e0cfee5d50889d414c74c2f851c73f1d0fe15
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -21,7 +21,7 @@ requirements:
     - ipython
     - notebook >=5.0.0
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - jupyter_contrib_core
   run:
@@ -39,7 +39,7 @@ requirements:
     - pandas
     - prometheus_client
     - prompt_toolkit
-    - python >=3.6
+    - python >={{ python_min }}
     - jupyter_client >=7.0.2
     - jinja2
     - sos >=0.19.2
@@ -50,6 +50,7 @@ test:
     - nose
     - pytest
     - selenium
+    - python {{ python_min }}
   imports:
     - sos_notebook
   commands:
