@@ -1,0 +1,74 @@
+schema_version: 1
+
+context:
+  version: 0.24.4
+
+package:
+  name: sos-notebook
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/s/sos-notebook/sos-notebook-${{ version }}.tar.gz
+  sha256: 85785be68915585f5405080d780e0cfee5d50889d414c74c2f851c73f1d0fe15
+
+build:
+  number: 3
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+    - ${{ PYTHON }} -m sos_notebook.install --sys-prefix
+
+requirements:
+  host:
+    - ipython
+    - notebook >=5.0.0
+    - pip
+    - python =${{ python_min }}
+    - setuptools
+    - jupyter_contrib_core
+  run:
+    - ipykernel
+    - ipython
+    - markdown
+    - nbconvert >=6.0.1
+    - nbformat
+    - notebook >=5.0.0
+    - graphviz
+    - python-graphviz
+    - pillow
+    - pandas
+    - prometheus_client
+    - prompt_toolkit
+    - python >=${{ python_min }}
+    - jupyter_client >=7.0.2
+    - jinja2
+    - sos >=0.19.2
+    - tabulate
+
+tests:
+  - python:
+      imports:
+        - sos_notebook
+      pip_check: true
+  - requirements:
+      run:
+        - pip
+        - python =${{ python_min }}
+    script:
+      - pip check
+      - jupyter kernelspec list | grep -w $PREFIX/share/jupyter/kernels/sos
+
+about:
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: "Script of Scripts (SoS): an interactive, cross-platform, and cross-language workflow system for reproducible data analysis"
+  homepage: https://github.com/vatlab/SOS
+  repository: https://github.com/vatlab/sos-notebook
+  documentation: https://vatlab.github.io/sos-docs/
+
+extra:
+  recipe-maintainers:
+    - danielnachun
+    - BoPeng
+    - gaow
+    - jdblischak
