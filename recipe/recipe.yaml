@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.24.6"
+  version: "0.24.7"
 
 package:
   name: sos-notebook
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sos-notebook/sos_notebook-${{ version }}.tar.gz
-  sha256: 104aad7e59fb895f6a9c70f9732a0b7f78d0e221fc52b1f5cd884a88f031590a
+  sha256: 960b7cb0a75359a629ed6f88262133daefcc812ca42cbe29d76ac39e90aa76c1
 
 build:
   number: 0
