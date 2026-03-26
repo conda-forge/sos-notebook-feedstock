@@ -1,18 +1,18 @@
 schema_version: 1
 
 context:
-  version: 0.24.4
+  version: "0.24.6"
 
 package:
   name: sos-notebook
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/sos-notebook/sos-notebook-${{ version }}.tar.gz
-  sha256: 85785be68915585f5405080d780e0cfee5d50889d414c74c2f851c73f1d0fe15
+  url: https://pypi.org/packages/source/s/sos-notebook/sos_notebook-${{ version }}.tar.gz
+  sha256: 104aad7e59fb895f6a9c70f9732a0b7f78d0e221fc52b1f5cd884a88f031590a
 
 build:
-  number: 3
+  number: 0
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
